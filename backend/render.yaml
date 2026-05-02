@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smartlearn-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn smartlearn_backend.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DJANGO_SETTINGS_MODULE
+        value: smartlearn_backend.settings
