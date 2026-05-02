@@ -31,7 +31,7 @@ export default function ResumePage() {
 
     try {
         const token = localStorage.getItem('access');
-        const response = await fetch('${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/resume/upload/', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/resume/upload/`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`
