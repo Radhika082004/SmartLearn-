@@ -65,7 +65,7 @@ export default function Home() {
     }
   };
 
-  if (!mounted) return null;
+  if (!mounted) return <div style={{ minHeight: '100vh', background: '#0a0a16' }} />;
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg-dark)', overflow: 'hidden', position: 'relative' }}>
